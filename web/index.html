@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0b1118"><title>Sentinel · Network watch</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="rail"><div class="brand-mark">S<span></span></div><div class="rail-line"></div><div class="rail-icon active">⌁</div><div class="rail-icon">◷</div><div class="rail-spacer"></div><div class="rail-icon">⚙</div><div class="avatar">S</div></aside>
+    <main class="main">
+      <header class="topbar"><div class="crumb"><span class="crumb-dim">Workspace</span><span class="slash">/</span><strong>Network watch</strong></div><div class="top-right"><span class="local-badge"><i></i> LOCAL SENSOR</span><span class="date" id="clock">--:--:--</span></div></header>
+      <section class="content">
+        <div class="heading-row"><div><div class="eyebrow">SENTINEL / SECURITY OVERVIEW</div><h1>Network watch<span class="period">.</span></h1><p class="subtitle">A quiet eye on the traffic moving through your network.</p></div><div class="monitor-pill"><span class="pulse"></span><span id="status-label">CONNECTING</span><span class="pill-sep">·</span><span id="since">sensor feed</span></div></div>
+        <section class="stats">
+          <article class="stat-card"><div class="stat-top"><span>PACKETS INSPECTED</span><span class="stat-icon cyan">⌁</span></div><div class="stat-value" id="packets">0</div><div class="stat-foot"><span class="live-dot"></span> Since sensor start</div></article>
+          <article class="stat-card"><div class="stat-top"><span>ALERTS RAISED</span><span class="stat-icon amber">⌑</span></div><div class="stat-value" id="alerts-total">0</div><div class="stat-foot" id="alert-caption">No alerts in this session</div></article>
+          <article class="stat-card"><div class="stat-top"><span>HIGH SEVERITY</span><span class="stat-icon red">↗</span></div><div class="stat-value" id="high-total">0</div><div class="stat-foot">Port scan and SYN burst signals</div></article>
+          <article class="stat-card sensor-card"><div class="stat-top"><span>SENSOR STATUS</span><span class="sensor-led"></span></div><div class="sensor-name" id="sensor-state">Waiting for sensor</div><div class="sensor-foot"><span class="mini-wave">▂▅▃▆▂▇▄▅▂</span><span>PASSIVE MONITORING</span></div></article>
+        </section>
+        <div class="section-head"><div><div class="eyebrow">LIVE DETECTIONS</div><h2>Alert stream</h2></div><div class="stream-actions"><span class="stream-count" id="stream-count">0 EVENTS</span><button id="clear-btn" class="clear-btn">Clear view <span>↗</span></button></div></div>
+        <section class="table-wrap"><div class="table-head"><span>SEVERITY</span><span>DETECTION</span><span>SOURCE</span><span>OBSERVATION</span><span>TIME</span></div><div id="alert-list" class="alert-list"><div class="empty-state"><div class="empty-orbit"><span>⌁</span></div><h3>All clear so far</h3><p>When Sentinel spots unusual traffic, detections will appear here.</p><div class="empty-status"><i></i> Listening for signals</div></div></div></section>
+        <footer><span><i class="footer-led"></i> SENSOR RUNNING LOCALLY</span><span>PASSIVE MODE <b>·</b> NO TRAFFIC MODIFICATION</span><span>LAST SYNC <strong id="last-sync">—</strong></span></footer>
+      </section>
+    </main>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>
+
